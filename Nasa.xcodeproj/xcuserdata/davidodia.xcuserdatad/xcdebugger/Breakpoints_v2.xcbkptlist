@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9D1269FB-CB54-460D-AE09-40B3BB5FB6EA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05B501F4-A785-4050-9AD1-9631FED92EC0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaTests/ModulesTest/Photos/PhotoViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "fetchPhoto()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "05B501F4-A785-4050-9AD1-9631FED92EC0 - d57c38284496d4c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NasaTests.MockPhotoRepository.fetchPhoto() async throws -&gt; Nasa.NasaPhoto"
+                  moduleName = "NasaTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/NasaTests/ModulesTest/Photos/PhotoViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "157">
+               </Location>
+               <Location
+                  uuid = "05B501F4-A785-4050-9AD1-9631FED92EC0 - d57c38284496d4c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NasaTests.MockPhotoRepository.fetchPhoto() async throws -&gt; Nasa.NasaPhoto"
+                  moduleName = "NasaTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/NasaTests/ModulesTest/Photos/PhotoViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C9010C9-8C67-4FC4-B299-4E71E3D77EBF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaTests/ModulesTest/Photos/PhotoViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "MockPhotoRepository"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9819E6E6-0947-4C46-9394-85FBEE922C89"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaTests/ModulesTest/Photos/PhotoViewModelTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "fetchPhoto()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/PhotoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchPhoto()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - f834ead7f8ad33a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - dbf7e6b4ca844689"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - 3b0eb8d462926fa4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - c4935fd2d9670da5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - f834ead7f8ad3045"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - dbf7e6b4ca84456a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - 3b0eb8d462926c47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - c4935fd2d9670e46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - d95d97ca2495877f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - dbaa7dd57bf3b7c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async throws -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - 82c2fb79e1d7f369"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  uuid = "66691E47-6D85-40F3-B6C5-2C9312AC39F4 - efb874c10076056c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in Nasa.PhotoViewModel.fetchPhoto() async -&gt; ()"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Modules/PhotoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "122">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDE115AB-A4FE-42A3-BF4E-FA9FCFAF4948"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foundation/Network/BasicNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "confirmResponse(data:response:type:method:url:requestBody:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BDE115AB-A4FE-42A3-BF4E-FA9FCFAF4948 - 789a210e2a7b63be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nasa.BasicNetwork.confirmResponse&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(data: Foundation.Data, response: __C.NSURLResponse, type: Swift.Optional&lt;&#x3c4;_0_0.Type&gt;, method: Swift.Optional&lt;Swift.String&gt;, url: Foundation.URL, requestBody: Nasa.Body) throws -&gt; Swift.Optional&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Foundation/Network/BasicNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "BDE115AB-A4FE-42A3-BF4E-FA9FCFAF4948 - 789a210e2a7b63be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nasa.BasicNetwork.confirmResponse&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(data: Foundation.Data, response: __C.NSURLResponse, type: Swift.Optional&lt;&#x3c4;_0_0.Type&gt;, method: Swift.Optional&lt;Swift.String&gt;, url: Foundation.URL, requestBody: Nasa.Body) throws -&gt; Swift.Optional&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Nasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/Foundation/Network/BasicNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "1647">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89962BA9-93C8-4CFA-9EA3-07D6E3148AFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaTests/ModulesTest/Repository/MainPhotoRepositoryTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "fetch()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "89962BA9-93C8-4CFA-9EA3-07D6E3148AFD - e3f5ae09cbdaa377"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NasaTests.MockPhotoService.fetch() async throws -&gt; Swift.Optional&lt;Nasa.NasaPhoto&gt;"
+                  moduleName = "NasaTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/NasaTests/ModulesTest/Repository/MainPhotoRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "89962BA9-93C8-4CFA-9EA3-07D6E3148AFD - e3f5ae09cbda9fba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for NasaTests.MockPhotoService.fetch() async throws -&gt; Swift.Optional&lt;Nasa.NasaPhoto&gt;"
+                  moduleName = "NasaTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidodia/Documents/iOS/Nasa/NasaTests/ModulesTest/Repository/MainPhotoRepositoryTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90102E48-B685-4771-98F0-C9F2B7EA6633"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NasaTests/ModulesTest/Repository/MainPhotoRepositoryTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "save(name:photo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

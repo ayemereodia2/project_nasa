@@ -7,13 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7C170DC2ADB1B5E002104D3 /* PhotoFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C170DB2ADB1B5E002104D3 /* PhotoFullView.swift */; };
+		FF34D4792ADA12F100D16DF3 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34D4782ADA12F100D16DF3 /* PhotoViewModel.swift */; };
+		FF34D47B2ADA134700D16DF3 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34D47A2ADA134700D16DF3 /* PhotoView.swift */; };
+		FF34D4852ADA2F4000D16DF3 /* PhotoViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34D4842ADA2F4000D16DF3 /* PhotoViewModelTest.swift */; };
 		FFC50BCB2AD8BA3300761FEC /* NasaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BCA2AD8BA3300761FEC /* NasaApp.swift */; };
-		FFC50BCD2AD8BA3300761FEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BCC2AD8BA3300761FEC /* ContentView.swift */; };
+		FFC50BCD2AD8BA3300761FEC /* MainPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BCC2AD8BA3300761FEC /* MainPhotoView.swift */; };
 		FFC50BCF2AD8BA3400761FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC50BCE2AD8BA3400761FEC /* Assets.xcassets */; };
 		FFC50BD22AD8BA3400761FEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC50BD12AD8BA3400761FEC /* Preview Assets.xcassets */; };
 		FFC50BDC2AD8BA3400761FEC /* NasaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BDB2AD8BA3400761FEC /* NasaTests.swift */; };
 		FFC50BE62AD8BA3400761FEC /* NasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BE52AD8BA3400761FEC /* NasaUITests.swift */; };
 		FFC50BE82AD8BA3400761FEC /* NasaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BE72AD8BA3400761FEC /* NasaUITestsLaunchTests.swift */; };
+		FFC50BFD2AD8BE4000761FEC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BFC2AD8BE4000761FEC /* NetworkError.swift */; };
+		FFC50BFF2AD8BEA000761FEC /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50BFE2AD8BEA000761FEC /* NetworkProvider.swift */; };
+		FFC50C012AD8BF0600761FEC /* BasicNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C002AD8BF0600761FEC /* BasicNetwork.swift */; };
+		FFC50C032AD8BF5900761FEC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C022AD8BF5900761FEC /* HTTPMethod.swift */; };
+		FFC50C062AD8C08C00761FEC /* CachedNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C052AD8C08C00761FEC /* CachedNetworkTests.swift */; };
+		FFC50C082AD8C2A300761FEC /* NasaPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C072AD8C2A300761FEC /* NasaPhoto.swift */; };
+		FFC50C0A2AD8E97F00761FEC /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C092AD8E97F00761FEC /* PhotoService.swift */; };
+		FFC50C0C2AD8E9F500761FEC /* MainPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C0B2AD8E9F500761FEC /* MainPhotoService.swift */; };
+		FFC50C0E2AD8EC9700761FEC /* AppSecretsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C0D2AD8EC9700761FEC /* AppSecretsProvider.swift */; };
+		FFC50C112AD8ED3300761FEC /* SecretWithApiAndUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C102AD8ED3300761FEC /* SecretWithApiAndUrl.swift */; };
+		FFC50C132AD8EF3C00761FEC /* MainAppAssetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C122AD8EF3C00761FEC /* MainAppAssetProvider.swift */; };
+		FFC50C162AD8F40300761FEC /* LocalAssetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C152AD8F40300761FEC /* LocalAssetStore.swift */; };
+		FFC50C182AD8F4B500761FEC /* MainAppSecretsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C172AD8F4B500761FEC /* MainAppSecretsProvider.swift */; };
+		FFC50C1B2AD8F84D00761FEC /* serversecrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FFC50C1A2AD8F84D00761FEC /* serversecrets.json */; };
+		FFC50C1E2AD8FC9600761FEC /* PhotoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C1D2AD8FC9600761FEC /* PhotoError.swift */; };
+		FFC50C202AD8FDC400761FEC /* MainPhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C1F2AD8FDC400761FEC /* MainPhotoDataSource.swift */; };
+		FFC50C222AD8FDEA00761FEC /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C212AD8FDEA00761FEC /* PhotoDataSource.swift */; };
+		FFC50C242AD9003800761FEC /* MainPhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C232AD9003800761FEC /* MainPhotoRepository.swift */; };
+		FFC50C262AD9005500761FEC /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C252AD9005500761FEC /* PhotoRepository.swift */; };
+		FFC50C292AD9036300761FEC /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C282AD9036300761FEC /* AppDependencyContainer.swift */; };
+		FFC50C2B2AD9A80000761FEC /* ExpandedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC50C2A2AD9A80000761FEC /* ExpandedViewModifier.swift */; };
+		FFD2D3132ADAB8A300848501 /* LogProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2D3122ADAB8A300848501 /* LogProvider.swift */; };
+		FFD2D3152ADAB9E900848501 /* DefaultLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2D3142ADAB9E900848501 /* DefaultLogger.swift */; };
+		FFD2D3182ADAC3F600848501 /* MainErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2D3172ADAC3F600848501 /* MainErrorHandler.swift */; };
+		FFD2D31A2ADAC40600848501 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2D3192ADAC40600848501 /* ErrorHandler.swift */; };
+		FFD2D31C2ADAC64300848501 /* MainPhotoErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2D31B2ADAC64300848501 /* MainPhotoErrorHandler.swift */; };
+		FFD2D3212ADADA7F00848501 /* MainPhotoRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2D3202ADADA7F00848501 /* MainPhotoRepositoryTest.swift */; };
+		FFD2D3272ADAFBA100848501 /* MainPhotoServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD2D3262ADAFBA100848501 /* MainPhotoServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +66,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7C170DB2ADB1B5E002104D3 /* PhotoFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullView.swift; sourceTree = "<group>"; };
+		FF34D4782ADA12F100D16DF3 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		FF34D47A2ADA134700D16DF3 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		FF34D4842ADA2F4000D16DF3 /* PhotoViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModelTest.swift; sourceTree = "<group>"; };
 		FFC50BC72AD8BA3300761FEC /* Nasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC50BCA2AD8BA3300761FEC /* NasaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaApp.swift; sourceTree = "<group>"; };
-		FFC50BCC2AD8BA3300761FEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FFC50BCC2AD8BA3300761FEC /* MainPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotoView.swift; sourceTree = "<group>"; };
 		FFC50BCE2AD8BA3400761FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFC50BD12AD8BA3400761FEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FFC50BD72AD8BA3400761FEC /* NasaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +80,34 @@
 		FFC50BE12AD8BA3400761FEC /* NasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC50BE52AD8BA3400761FEC /* NasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITests.swift; sourceTree = "<group>"; };
 		FFC50BE72AD8BA3400761FEC /* NasaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FFC50BFC2AD8BE4000761FEC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FFC50BFE2AD8BEA000761FEC /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		FFC50C002AD8BF0600761FEC /* BasicNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNetwork.swift; sourceTree = "<group>"; };
+		FFC50C022AD8BF5900761FEC /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FFC50C052AD8C08C00761FEC /* CachedNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedNetworkTests.swift; sourceTree = "<group>"; };
+		FFC50C072AD8C2A300761FEC /* NasaPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPhoto.swift; sourceTree = "<group>"; };
+		FFC50C092AD8E97F00761FEC /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		FFC50C0B2AD8E9F500761FEC /* MainPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotoService.swift; sourceTree = "<group>"; };
+		FFC50C0D2AD8EC9700761FEC /* AppSecretsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecretsProvider.swift; sourceTree = "<group>"; };
+		FFC50C102AD8ED3300761FEC /* SecretWithApiAndUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretWithApiAndUrl.swift; sourceTree = "<group>"; };
+		FFC50C122AD8EF3C00761FEC /* MainAppAssetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppAssetProvider.swift; sourceTree = "<group>"; };
+		FFC50C152AD8F40300761FEC /* LocalAssetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssetStore.swift; sourceTree = "<group>"; };
+		FFC50C172AD8F4B500761FEC /* MainAppSecretsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppSecretsProvider.swift; sourceTree = "<group>"; };
+		FFC50C1A2AD8F84D00761FEC /* serversecrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = serversecrets.json; sourceTree = "<group>"; };
+		FFC50C1D2AD8FC9600761FEC /* PhotoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoError.swift; sourceTree = "<group>"; };
+		FFC50C1F2AD8FDC400761FEC /* MainPhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotoDataSource.swift; sourceTree = "<group>"; };
+		FFC50C212AD8FDEA00761FEC /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		FFC50C232AD9003800761FEC /* MainPhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotoRepository.swift; sourceTree = "<group>"; };
+		FFC50C252AD9005500761FEC /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		FFC50C282AD9036300761FEC /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		FFC50C2A2AD9A80000761FEC /* ExpandedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedViewModifier.swift; sourceTree = "<group>"; };
+		FFD2D3122ADAB8A300848501 /* LogProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogProvider.swift; sourceTree = "<group>"; };
+		FFD2D3142ADAB9E900848501 /* DefaultLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLogger.swift; sourceTree = "<group>"; };
+		FFD2D3172ADAC3F600848501 /* MainErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainErrorHandler.swift; sourceTree = "<group>"; };
+		FFD2D3192ADAC40600848501 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		FFD2D31B2ADAC64300848501 /* MainPhotoErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotoErrorHandler.swift; sourceTree = "<group>"; };
+		FFD2D3202ADADA7F00848501 /* MainPhotoRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotoRepositoryTest.swift; sourceTree = "<group>"; };
+		FFD2D3262ADAFBA100848501 /* MainPhotoServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhotoServiceTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +135,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF34D47F2ADA190F00D16DF3 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C2A2AD9A80000761FEC /* ExpandedViewModifier.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FF34D4802ADA1A5300D16DF3 /* ModulesTest */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D3232ADAFB2500848501 /* Service */,
+				FFD2D31F2ADADA5400848501 /* Repository */,
+				FF34D4812ADA1A6900D16DF3 /* View */,
+			);
+			path = ModulesTest;
+			sourceTree = "<group>";
+		};
+		FF34D4812ADA1A6900D16DF3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF34D4842ADA2F4000D16DF3 /* PhotoViewModelTest.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FFC50BBE2AD8BA3300761FEC = {
 			isa = PBXGroup;
 			children = (
+				FFC50C192AD8F78C00761FEC /* Resources */,
+				FFC50BF92AD8BD6A00761FEC /* Foundation */,
+				FFC50BF42AD8BAC100761FEC /* Modules */,
 				FFC50BC92AD8BA3300761FEC /* Nasa */,
 				FFC50BDA2AD8BA3400761FEC /* NasaTests */,
 				FFC50BE42AD8BA3400761FEC /* NasaUITests */,
@@ -95,9 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				FFC50BCA2AD8BA3300761FEC /* NasaApp.swift */,
-				FFC50BCC2AD8BA3300761FEC /* ContentView.swift */,
+				FFC50BCC2AD8BA3300761FEC /* MainPhotoView.swift */,
 				FFC50BCE2AD8BA3400761FEC /* Assets.xcassets */,
 				FFC50BD02AD8BA3400761FEC /* Preview Content */,
+				FFC50C282AD9036300761FEC /* AppDependencyContainer.swift */,
 			);
 			path = Nasa;
 			sourceTree = "<group>";
@@ -113,6 +207,8 @@
 		FFC50BDA2AD8BA3400761FEC /* NasaTests */ = {
 			isa = PBXGroup;
 			children = (
+				FF34D4802ADA1A5300D16DF3 /* ModulesTest */,
+				FFC50C042AD8C06600761FEC /* Network */,
 				FFC50BDB2AD8BA3400761FEC /* NasaTests.swift */,
 			);
 			path = NasaTests;
@@ -125,6 +221,174 @@
 				FFC50BE72AD8BA3400761FEC /* NasaUITestsLaunchTests.swift */,
 			);
 			path = NasaUITests;
+			sourceTree = "<group>";
+		};
+		FFC50BF42AD8BAC100761FEC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FF34D47F2ADA190F00D16DF3 /* CustomViews */,
+				FFC50BFA2AD8BDBF00761FEC /* Photos */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FFC50BF52AD8BB5C00761FEC /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C1F2AD8FDC400761FEC /* MainPhotoDataSource.swift */,
+				FFC50C212AD8FDEA00761FEC /* PhotoDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FFC50BF62AD8BB6A00761FEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C072AD8C2A300761FEC /* NasaPhoto.swift */,
+				FFC50C1D2AD8FC9600761FEC /* PhotoError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFC50BF72AD8BB7000761FEC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C232AD9003800761FEC /* MainPhotoRepository.swift */,
+				FFC50C252AD9005500761FEC /* PhotoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FFC50BF82AD8BB8500761FEC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C092AD8E97F00761FEC /* PhotoService.swift */,
+				FFC50C0B2AD8E9F500761FEC /* MainPhotoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FFC50BF92AD8BD6A00761FEC /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D3162ADAC37B00848501 /* Common */,
+				FFD2D3112ADAB88C00848501 /* App Logger */,
+				FFC50C0F2AD8ED0D00761FEC /* App Config */,
+				FFC50BFB2AD8BE2200761FEC /* Network */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		FFC50BFA2AD8BDBF00761FEC /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D31E2ADADA2500848501 /* View */,
+				FFD2D31D2ADADA1600848501 /* Errors */,
+				FFC50BF82AD8BB8500761FEC /* Service */,
+				FFC50BF72AD8BB7000761FEC /* Repository */,
+				FFC50BF62AD8BB6A00761FEC /* Model */,
+				FFC50BF52AD8BB5C00761FEC /* DataSource */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		FFC50BFB2AD8BE2200761FEC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50BFC2AD8BE4000761FEC /* NetworkError.swift */,
+				FFC50BFE2AD8BEA000761FEC /* NetworkProvider.swift */,
+				FFC50C002AD8BF0600761FEC /* BasicNetwork.swift */,
+				FFC50C022AD8BF5900761FEC /* HTTPMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FFC50C042AD8C06600761FEC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C052AD8C08C00761FEC /* CachedNetworkTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FFC50C0F2AD8ED0D00761FEC /* App Config */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C142AD8F3E300761FEC /* Local Asset Store */,
+				FFC50C0D2AD8EC9700761FEC /* AppSecretsProvider.swift */,
+				FFC50C102AD8ED3300761FEC /* SecretWithApiAndUrl.swift */,
+				FFC50C172AD8F4B500761FEC /* MainAppSecretsProvider.swift */,
+			);
+			path = "App Config";
+			sourceTree = "<group>";
+		};
+		FFC50C142AD8F3E300761FEC /* Local Asset Store */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C122AD8EF3C00761FEC /* MainAppAssetProvider.swift */,
+				FFC50C152AD8F40300761FEC /* LocalAssetStore.swift */,
+			);
+			path = "Local Asset Store";
+			sourceTree = "<group>";
+		};
+		FFC50C192AD8F78C00761FEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FFC50C1A2AD8F84D00761FEC /* serversecrets.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFD2D3112ADAB88C00848501 /* App Logger */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D3122ADAB8A300848501 /* LogProvider.swift */,
+				FFD2D3142ADAB9E900848501 /* DefaultLogger.swift */,
+			);
+			path = "App Logger";
+			sourceTree = "<group>";
+		};
+		FFD2D3162ADAC37B00848501 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D3172ADAC3F600848501 /* MainErrorHandler.swift */,
+				FFD2D3192ADAC40600848501 /* ErrorHandler.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FFD2D31D2ADADA1600848501 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D31B2ADAC64300848501 /* MainPhotoErrorHandler.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		FFD2D31E2ADADA2500848501 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF34D47A2ADA134700D16DF3 /* PhotoView.swift */,
+				FF34D4782ADA12F100D16DF3 /* PhotoViewModel.swift */,
+				E7C170DB2ADB1B5E002104D3 /* PhotoFullView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFD2D31F2ADADA5400848501 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D3202ADADA7F00848501 /* MainPhotoRepositoryTest.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FFD2D3232ADAFB2500848501 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FFD2D3262ADAFBA100848501 /* MainPhotoServiceTest.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFC50BD22AD8BA3400761FEC /* Preview Assets.xcassets in Resources */,
+				FFC50C1B2AD8F84D00761FEC /* serversecrets.json in Resources */,
 				FFC50BCF2AD8BA3400761FEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +522,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC50BCD2AD8BA3300761FEC /* ContentView.swift in Sources */,
+				FFD2D3182ADAC3F600848501 /* MainErrorHandler.swift in Sources */,
+				FFC50C0A2AD8E97F00761FEC /* PhotoService.swift in Sources */,
+				FF34D4792ADA12F100D16DF3 /* PhotoViewModel.swift in Sources */,
+				FFC50C112AD8ED3300761FEC /* SecretWithApiAndUrl.swift in Sources */,
+				FFC50C292AD9036300761FEC /* AppDependencyContainer.swift in Sources */,
+				FFC50BFD2AD8BE4000761FEC /* NetworkError.swift in Sources */,
+				E7C170DC2ADB1B5E002104D3 /* PhotoFullView.swift in Sources */,
+				FFD2D31A2ADAC40600848501 /* ErrorHandler.swift in Sources */,
+				FFD2D3152ADAB9E900848501 /* DefaultLogger.swift in Sources */,
+				FFC50C162AD8F40300761FEC /* LocalAssetStore.swift in Sources */,
+				FFC50BFF2AD8BEA000761FEC /* NetworkProvider.swift in Sources */,
+				FFC50C032AD8BF5900761FEC /* HTTPMethod.swift in Sources */,
+				FFC50C082AD8C2A300761FEC /* NasaPhoto.swift in Sources */,
+				FFC50BCD2AD8BA3300761FEC /* MainPhotoView.swift in Sources */,
 				FFC50BCB2AD8BA3300761FEC /* NasaApp.swift in Sources */,
+				FF34D47B2ADA134700D16DF3 /* PhotoView.swift in Sources */,
+				FFC50C0E2AD8EC9700761FEC /* AppSecretsProvider.swift in Sources */,
+				FFC50C262AD9005500761FEC /* PhotoRepository.swift in Sources */,
+				FFC50C132AD8EF3C00761FEC /* MainAppAssetProvider.swift in Sources */,
+				FFC50C1E2AD8FC9600761FEC /* PhotoError.swift in Sources */,
+				FFC50C222AD8FDEA00761FEC /* PhotoDataSource.swift in Sources */,
+				FFD2D3132ADAB8A300848501 /* LogProvider.swift in Sources */,
+				FFD2D31C2ADAC64300848501 /* MainPhotoErrorHandler.swift in Sources */,
+				FFC50C2B2AD9A80000761FEC /* ExpandedViewModifier.swift in Sources */,
+				FFC50C242AD9003800761FEC /* MainPhotoRepository.swift in Sources */,
+				FFC50C012AD8BF0600761FEC /* BasicNetwork.swift in Sources */,
+				FFC50C0C2AD8E9F500761FEC /* MainPhotoService.swift in Sources */,
+				FFC50C202AD8FDC400761FEC /* MainPhotoDataSource.swift in Sources */,
+				FFC50C182AD8F4B500761FEC /* MainAppSecretsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +558,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD2D3272ADAFBA100848501 /* MainPhotoServiceTest.swift in Sources */,
+				FFC50C062AD8C08C00761FEC /* CachedNetworkTests.swift in Sources */,
+				FF34D4852ADA2F4000D16DF3 /* PhotoViewModelTest.swift in Sources */,
 				FFC50BDC2AD8BA3400761FEC /* NasaTests.swift in Sources */,
+				FFD2D3212ADADA7F00848501 /* MainPhotoRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nasa/Preview Content\"";
-				DEVELOPMENT_TEAM = 6M84T8YJW2;
+				DEVELOPMENT_TEAM = LB5YMG5W6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -430,12 +726,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.odia.apps.Nasa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odia.apps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -451,7 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nasa/Preview Content\"";
-				DEVELOPMENT_TEAM = 6M84T8YJW2;
+				DEVELOPMENT_TEAM = LB5YMG5W6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -459,12 +756,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.odia.apps.Nasa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.odia.apps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
