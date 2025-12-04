@@ -44,7 +44,8 @@ actor BasicNetwork: NetworkProvider {
             )
         } catch let error as NetworkError {
             throw error
-        } catch {
+        } catch let error {
+          print(error)
             throw NetworkError.unexpected(
                 message: "Network Error",
                 innerError: "Check your connection"

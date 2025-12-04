@@ -8,7 +8,6 @@
 import Foundation
 
 struct NasaPhoto: Codable, Hashable {
-    var copyright: String
     var date: String
     var explanation: String
     var hdurl: String

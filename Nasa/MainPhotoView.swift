@@ -9,15 +9,11 @@ import SwiftUI
 import Combine
 
 struct MainPhotoView: View {
-  @StateObject private var viewModel:PhotoViewModel
+  @StateObject var viewModel:PhotoViewModel = PhotoViewModel()
   @State private var isFullScreenVisible = false
   @State private var showTextAfter = false
   private let deviceSize = UIScreen.main.bounds.size
   private let duration = 0.35
-  
-  init(viewModel: PhotoViewModel) {
-    _viewModel = StateObject(wrappedValue: viewModel)
-  }
   
   var body: some View {
     VStack(alignment: .center) {
@@ -41,10 +37,10 @@ struct MainPhotoView: View {
       
       if showTextAfter && isFullScreenVisible == false {
         
-        Text(viewModel.getImageTitle())
+        Text(viewModel.imageTitle)
           .multilineTextAlignment(.center)
-          .lineLimit(nil)
           .transition(.show(to: 0, animationDuration: duration))
+          .padding(.bottom, 20)
         Spacer()
       }
     }

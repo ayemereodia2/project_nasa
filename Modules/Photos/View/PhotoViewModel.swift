@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-@MainActor
+
 class PhotoViewModel: ObservableObject {
     @Published private var photo: NasaPhoto?
     @Published var showActivityIndicator = false
@@ -25,7 +25,7 @@ class PhotoViewModel: ObservableObject {
         self.errorHandler = errorHandler
     }
     
-    func fetchPhoto() async {
+  @MainActor func fetchPhoto() async {
         Task {
             do {
                 showActivityIndicator = true
@@ -55,11 +55,9 @@ class PhotoViewModel: ObservableObject {
         }
     }
     
-    func getImageTitle() -> String {
-        if let photo = photo {
-            return photo.title
-        }
-        return ""
+   var imageTitle: String {
+        guard let photo = photo else  { return "" }
+        return photo.title
     }
     
     func getImage(url: String) -> Image? {

@@ -13,20 +13,21 @@ struct PhotoFullView: View {
   private let duration = 0.35
 
   var body: some View {
-    ZStack(alignment: .bottom) {
-      GeometryReader{ geometry in
-        PhotoView(viewModel: viewModel){}
-        .transition(
-          .expand(
-            from: CGSize(width: .infinity, height: deviceSize.height / 2),
-            to: geometry.size)
+    VStack() {
+      PhotoView(viewModel: viewModel){}
+      .transition(
+        .expand(
+          from: CGSize(width: .infinity, height: deviceSize.height / 2),
+          to: UIScreen.main.bounds.size
         )
-      }
+      )
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
       
-      Text(viewModel.getImageTitle())
+      Text(viewModel.imageTitle)
         .multilineTextAlignment(.center)
-        .lineLimit(nil)
         .transition(.show(to: 0, animationDuration: duration))
+        .background(Color.clear)
+        .frame(maxWidth: .infinity, alignment: .center)
     }
   }
 }
