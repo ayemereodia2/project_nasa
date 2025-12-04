@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70EAA5E2EE1267400DC49DE /* CustomNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70EAA5D2EE1267400DC49DE /* CustomNetworkError.swift */; };
+		E70EAA602EE126C300DC49DE /* NetworkClientV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70EAA5F2EE126C300DC49DE /* NetworkClientV1.swift */; };
+		E70EAA622EE1275300DC49DE /* URLSessionNetworkClientV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70EAA612EE1275300DC49DE /* URLSessionNetworkClientV1.swift */; };
+		E70EAA642EE1281F00DC49DE /* HttpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70EAA632EE1281F00DC49DE /* HttpHelper.swift */; };
+		E791D97E2EE1363E006985AF /* ThumbnailFailedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E791D97D2EE1363E006985AF /* ThumbnailFailedError.swift */; };
 		E7C170DC2ADB1B5E002104D3 /* PhotoFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C170DB2ADB1B5E002104D3 /* PhotoFullView.swift */; };
 		FF34D4792ADA12F100D16DF3 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34D4782ADA12F100D16DF3 /* PhotoViewModel.swift */; };
 		FF34D47B2ADA134700D16DF3 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34D47A2ADA134700D16DF3 /* PhotoView.swift */; };
@@ -66,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E70EAA5D2EE1267400DC49DE /* CustomNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNetworkError.swift; sourceTree = "<group>"; };
+		E70EAA5F2EE126C300DC49DE /* NetworkClientV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientV1.swift; sourceTree = "<group>"; };
+		E70EAA612EE1275300DC49DE /* URLSessionNetworkClientV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkClientV1.swift; sourceTree = "<group>"; };
+		E70EAA632EE1281F00DC49DE /* HttpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHelper.swift; sourceTree = "<group>"; };
+		E791D97D2EE1363E006985AF /* ThumbnailFailedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailFailedError.swift; sourceTree = "<group>"; };
 		E7C170DB2ADB1B5E002104D3 /* PhotoFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullView.swift; sourceTree = "<group>"; };
 		FF34D4782ADA12F100D16DF3 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		FF34D47A2ADA134700D16DF3 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
@@ -135,6 +145,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E70EAA5C2EE1264800DC49DE /* NetworkV2 */ = {
+			isa = PBXGroup;
+			children = (
+				E70EAA5D2EE1267400DC49DE /* CustomNetworkError.swift */,
+				E70EAA5F2EE126C300DC49DE /* NetworkClientV1.swift */,
+				E70EAA612EE1275300DC49DE /* URLSessionNetworkClientV1.swift */,
+				E70EAA632EE1281F00DC49DE /* HttpHelper.swift */,
+				E791D97D2EE1363E006985AF /* ThumbnailFailedError.swift */,
+			);
+			path = NetworkV2;
+			sourceTree = "<group>";
+		};
 		FF34D47F2ADA190F00D16DF3 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +317,7 @@
 		FFC50BFB2AD8BE2200761FEC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E70EAA5C2EE1264800DC49DE /* NetworkV2 */,
 				FFC50BFC2AD8BE4000761FEC /* NetworkError.swift */,
 				FFC50BFE2AD8BEA000761FEC /* NetworkProvider.swift */,
 				FFC50C002AD8BF0600761FEC /* BasicNetwork.swift */,
@@ -522,8 +545,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70EAA602EE126C300DC49DE /* NetworkClientV1.swift in Sources */,
 				FFD2D3182ADAC3F600848501 /* MainErrorHandler.swift in Sources */,
 				FFC50C0A2AD8E97F00761FEC /* PhotoService.swift in Sources */,
+				E70EAA5E2EE1267400DC49DE /* CustomNetworkError.swift in Sources */,
 				FF34D4792ADA12F100D16DF3 /* PhotoViewModel.swift in Sources */,
 				FFC50C112AD8ED3300761FEC /* SecretWithApiAndUrl.swift in Sources */,
 				FFC50C292AD9036300761FEC /* AppDependencyContainer.swift in Sources */,
@@ -536,14 +561,17 @@
 				FFC50C032AD8BF5900761FEC /* HTTPMethod.swift in Sources */,
 				FFC50C082AD8C2A300761FEC /* NasaPhoto.swift in Sources */,
 				FFC50BCD2AD8BA3300761FEC /* MainPhotoView.swift in Sources */,
+				E791D97E2EE1363E006985AF /* ThumbnailFailedError.swift in Sources */,
 				FFC50BCB2AD8BA3300761FEC /* NasaApp.swift in Sources */,
 				FF34D47B2ADA134700D16DF3 /* PhotoView.swift in Sources */,
 				FFC50C0E2AD8EC9700761FEC /* AppSecretsProvider.swift in Sources */,
 				FFC50C262AD9005500761FEC /* PhotoRepository.swift in Sources */,
+				E70EAA642EE1281F00DC49DE /* HttpHelper.swift in Sources */,
 				FFC50C132AD8EF3C00761FEC /* MainAppAssetProvider.swift in Sources */,
 				FFC50C1E2AD8FC9600761FEC /* PhotoError.swift in Sources */,
 				FFC50C222AD8FDEA00761FEC /* PhotoDataSource.swift in Sources */,
 				FFD2D3132ADAB8A300848501 /* LogProvider.swift in Sources */,
+				E70EAA622EE1275300DC49DE /* URLSessionNetworkClientV1.swift in Sources */,
 				FFD2D31C2ADAC64300848501 /* MainPhotoErrorHandler.swift in Sources */,
 				FFC50C2B2AD9A80000761FEC /* ExpandedViewModifier.swift in Sources */,
 				FFC50C242AD9003800761FEC /* MainPhotoRepository.swift in Sources */,

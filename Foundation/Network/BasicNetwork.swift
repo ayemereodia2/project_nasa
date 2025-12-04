@@ -61,7 +61,7 @@ actor BasicNetwork: NetworkProvider {
         url: URL,
         requestBody: Body
     ) throws -> Response? {
-        //Here, we're going to check to make sure that we have a good clean response.
+        //check to make sure that we have a good clean response.
         //First, do we have a 200-299?
         guard let httpResponse = response as? HTTPURLResponse else {
 
@@ -73,9 +73,7 @@ actor BasicNetwork: NetworkProvider {
         let code = httpResponse.statusCode
         guard (200...299).contains(code) else {
             
-            // There may be more useful info than just error and the errorCode in the body
-            // try to pass in the body as parameter of the error
-            
+        
             do {
                 var _ = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
             } catch {
@@ -115,30 +113,11 @@ actor BasicNetwork: NetworkProvider {
     private let session: URLSession
 }
 
-
-/**
- This little protocol will allow us to easily declare a struct to match the
- body of the POST or PUT messages.  Just make the struct conform to Body
- and you can directly convert it to a Data object.  Since the sole method in
- this protocl has a default implementation, this should be a matter of doing
- a conformance extension at the
- */
 public protocol Body: Encodable {
-    /**
-     Returns the Data of the object.
-     
-     A default implementation of this protocol
-     just calls `JSONEncoder().encode(self)` and if there is an error it will
-     return an empty `Data()` instance.
-    */
     func asData() -> Data
 }
 
-/*
- This provides a default implementation for the Body.asData() method, which
- just calls out to the JSONEncoder.encode() method.  If anything goes wrong
- it will return a blank Data() instance
- */
+
 extension Body {
     public func asData() -> Data {
         let encoder = JSONEncoder()

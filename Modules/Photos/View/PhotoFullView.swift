@@ -14,7 +14,7 @@ struct PhotoFullView: View {
 
   var body: some View {
     VStack() {
-      PhotoView(viewModel: viewModel){}
+      PhotoView(viewModel: viewModel)
       .transition(
         .expand(
           from: CGSize(width: .infinity, height: deviceSize.height / 2),

@@ -11,7 +11,7 @@ import SwiftUI
 struct NasaApp: App {
     var body: some Scene {
         WindowGroup {
-            MainPhotoView(viewModel: PhotoViewModel())
+            MainPhotoView<PhotoViewModel>(viewModel: PhotoViewModel())
         }
     }
 }

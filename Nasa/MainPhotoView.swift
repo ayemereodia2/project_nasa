@@ -6,78 +6,71 @@
 //
 
 import SwiftUI
-import Combine
 
-struct MainPhotoView: View {
-  @StateObject var viewModel:PhotoViewModel = PhotoViewModel()
-  @State private var isFullScreenVisible = false
-  @State private var showTextAfter = false
-  private let deviceSize = UIScreen.main.bounds.size
-  private let duration = 0.35
+struct MainPhotoView<ViewModel: PhotoViewModelProtocol>: View {
+  // MARK: - properties
+  @StateObject var viewModel: PhotoViewModel
+  private let titleAnimationDuration: TimeInterval = 0.35
   
   var body: some View {
-    VStack(alignment: .center) {
+    GeometryReader { proxy in
+      let halfHeight = proxy.size.height * 0.5
       
-      if isFullScreenVisible {
-        PhotoFullView(viewModel: viewModel)
-      } else {
-        Spacer()
-        PhotoView(viewModel: viewModel){
-          showTextAfter = true
-        }
-        .frame(height: deviceSize.height / 2)
-        .frame(maxWidth: .infinity)
-        .transition(
-          .expand(
-            from: deviceSize,
-            to: CGSize(width: .infinity, height: deviceSize.height / 2))
-        )
-        Spacer()
-      }
-      
-      if showTextAfter && isFullScreenVisible == false {
+      VStack(spacing: 16) {
+          if viewModel.isFullScreen {
+            PhotoView(viewModel: viewModel)
+              .frame(maxWidth: .infinity, maxHeight: .infinity)
+              .transition(.scale.combined(with: .opacity))
+            
+          } else {
+            PhotoView(viewModel: viewModel)
+            .frame(height: halfHeight)
+            .frame(maxWidth: .infinity)
+            .transition(.move(edge: .bottom).combined(with: .opacity))
+          }
         
-        Text(viewModel.imageTitle)
-          .multilineTextAlignment(.center)
-          .transition(.show(to: 0, animationDuration: duration))
-          .padding(.bottom, 20)
-        Spacer()
-      }
-    }
-    .alert(viewModel.getErrorTitle(), isPresented: $viewModel.showErrorMessage) {
-      
-      Button(viewModel.okButtonTitle(), role: .cancel) {
-        viewModel.hideProgressView()
-      }
-      
-      Button(viewModel.tryAgainButtonTitle(), role: .destructive) {
-        Task {
-          await viewModel.fetchPhoto()
+        if viewModel.shouldShowTitle {
+          bottomTitle
         }
       }
-      
-    }
-  message: {
-    Text(viewModel.getErrorMessage())
-  }
-  .overlay {
-    if viewModel.showActivityIndicator {
-      ProgressView()
-    }
-  }
-  .onTapGesture {
-    withAnimation {
-      isFullScreenVisible.toggle()
+      .task {
+        await viewModel.fetchPhoto()
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .alert(viewModel.errorTitle, isPresented: $viewModel.showErrorMessage) {
+        dismissButton
+        tryAgainButton
+      } message: {
+        Text(viewModel.errorMessage)
+      }
     }
   }
-  .task {
-    await viewModel.fetchPhoto()
+  
+  // MARK: - tryAgain Button
+  @ViewBuilder
+  var tryAgainButton: some View {
+    Button(viewModel.tryAgainButtonTitle, role: .destructive) {
+      Task {
+        await viewModel.fetchPhoto()
+      }
+    }
   }
-    
+  
+  // MARK: - Ok Button
+  @ViewBuilder
+  var dismissButton: some View {
+    Button(viewModel.okButtonTitle, role: .cancel) {
+      viewModel.dismiss()
+    }
   }
-}
-
-
-#Preview {
-  MainPhotoView(viewModel: PhotoViewModel())
+  
+  // MARK: - Bottom Image Title
+  @ViewBuilder
+  var bottomTitle: some View {
+    Text(viewModel.imageTitle)
+      .multilineTextAlignment(.center)
+      .padding(.horizontal)
+      .padding(.bottom, 20)
+      .transition(.opacity.combined(with: .move(edge: .bottom)))
+  }
 }

@@ -5,97 +5,135 @@
 //  Created by DAVID ODIA on 14/10/2023.
 //
 
-import Foundation
 import SwiftUI
 
-
-class PhotoViewModel: ObservableObject {
-    @Published private var photo: NasaPhoto?
-    @Published var showActivityIndicator = false
-    @Published var showErrorMessage = false
-    private var errorMessage: String?
-    private let repository: PhotoRepository
-    private let errorHandler: ErrorHandler
+@MainActor
+final class PhotoViewModel: PhotoViewModelProtocol {
+  // MARK: - Published State
+  
+  @Published private var photo: NasaPhoto?
+  @Published private var internalErrorMessage: String?
+  @Published var showActivityIndicator = false
+  @Published var showErrorMessage = false
+  @Published  var isFullScreen = false
+  @Published  var shouldShowTitle = false
+  
+  // MARK: - Dependencies
+  
+  private let repository: PhotoRepository
+  private let errorHandler: ErrorHandler
+  
+  // MARK: - Init
+  
+  init(
+    repository: PhotoRepository = AppDependencyContainer.makePhotoRepository(),
+    errorHandler: ErrorHandler = AppDependencyContainer.makeErrorHandler()
+  ) {
+    self.repository = repository
+    self.errorHandler = errorHandler
+  }
+  
+  
+  func showTitle() {
+    shouldShowTitle = true
+  }
+  
+  func fullScreen() {
+    isFullScreen.toggle()
+  }
+  
+  func fetchPhoto() async {
+    showActivityIndicator = true
     
-    init(
-        repository: PhotoRepository = appMain.makePhotoRepository(),
-        errorHandler: ErrorHandler = appMain.makeErrorHandler()
-    ) {
-        self.repository = repository
-        self.errorHandler = errorHandler
+    do {
+      let fetchedPhoto = try await repository.fetchPhoto()
+      photo = fetchedPhoto
+      shouldShowTitle = true
+    } catch let error as PhotoError {
+      handleError(with: errorHandler.handleError(error: error))
+      showErrorMessage = true
+    } catch let error as NetworkError {
+      handleError(with: errorHandler.handleError(error: error))
+      showErrorMessage = true
+    } catch {
+      handleError(with: error.localizedDescription)
+      showErrorMessage = true
     }
     
-  @MainActor func fetchPhoto() async {
-        Task {
-            do {
-                showActivityIndicator = true
-               let fetchedPhoto = try await repository.fetchPhoto()
-                    photo = fetchedPhoto
-                    showActivityIndicator = false
-            } catch let error as PhotoError {
-                errorMessage = errorHandler.handleError(error: error)
-                showErrorMessage = true
-            }
-            catch let error as NetworkError {
-                errorMessage = errorHandler.handleError(error: error)
-                showErrorMessage = true
-            }
-       }
+    showActivityIndicator = false
+  }
+  
+  // MARK: - Additional Helpers
+  
+  func getContentUrl() -> (MediaType?, String?)? {
+    guard let mediaType = photo?.media_type else {
+      return (nil, nil)   // Should not normally happen
     }
     
-    func getContentUrl() -> (MediaType?, String?)? {
-        switch photo?.media_type {
-        case .imageForm:
-            return (MediaType.imageForm, photo?.hdurl)
-        case .videoForm:
-            return (MediaType.videoForm, photo?.hdurl)
-        case .none:
-            // should never get here
-            return (nil,nil)
-        }
+    switch mediaType {
+    case .imageForm:
+      return (.imageForm, photo?.hdurl)
+    case .videoForm:
+      return (.videoForm, photo?.hdurl)
     }
-    
-   var imageTitle: String {
-        guard let photo = photo else  { return "" }
-        return photo.title
+  }
+  
+  func getImage(url: String) -> Image? {
+    // Assuming repository returns something convertible to SwiftUI.Image
+    guard let image = try? repository.getImage(imageUrl: url) as? Image else {
+      return nil
     }
-    
-    func getImage(url: String) -> Image? {
-        guard let image = try? repository.getImage(imageUrl: url) as? Image else {
-            return nil
-        }
-        return image
-    }
-    
-    func storeImage(url: String, image: Image) {
-        repository.storeImage(key: url, image: image)
-    }
-    
-    func getErrorTitle() -> String {
-        .errorTitle
-    }
-    
-    func okButtonTitle() -> String {
-        .okButton
-    }
-    func tryAgainButtonTitle() -> String {
-        .tryAgainButton
-    }
-    
-    func hideProgressView() {
-        showActivityIndicator = false
-    }
-    
-    func getErrorMessage() -> String {
-        errorMessage ?? ""
-    }
-    
-    typealias appMain = AppDependencyContainer
+    return image
+  }
+  
+  func storeImage(url: String, image: Image) {
+    repository.storeImage(key: url, image: image)
+  }
+  
+  func handleError(with message: String) {
+    internalErrorMessage = message
+  }
+  
+  func dismiss() {
+    showErrorMessage = false
+  }
 }
 
+extension PhotoViewModel {
+  // MARK: - Computed properties
+  
+  var imageTitle: String {
+    guard let photo = photo else { return "" }
+    return photo.title
+  }
+  
+  // MARK: - Helpers
+  var errorTitle: String {
+    .errorTitle
+  }
+  
+  var errorMessage: String {
+    internalErrorMessage ?? .defaultErrorMessage
+  }
+  
+  var okButtonTitle: String {
+    .okButton
+  }
+  
+  var tryAgainButtonTitle: String {
+    .tryAgainButton
+  }
+}
+
+// MARK: - Strings
+
 private extension String {
-    static let message = "Error Fetching Image"
-    static let errorTitle = "error"
-    static let okButton = "Ok"
-    static let tryAgainButton = "Try Again"
+  static let defaultErrorMessage = "Try again later."
+  static let errorTitle = "Error"
+  static let okButton = "OK"
+  static let tryAgainButton = "Try Again"
+}
+
+protocol PhotoViewModelProtocol: ObservableObject {
+  func fetchPhoto() async
 }

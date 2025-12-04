@@ -7,9 +7,6 @@
 
 import Foundation
 
-/**
- The standard HTTP Method types.
- */
 public enum HTTPMethod: String {
     case get    = "GET"
     case post   = "POST"

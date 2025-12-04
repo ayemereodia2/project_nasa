@@ -30,14 +30,14 @@ import SwiftUI
     }
     
     func testPhotoViewModelGivenValidPhotoModelGetImageUrlReturnsUrl()  {
-        repository.mockedFetchPhotoResult = NasaPhoto(copyright: "David Cruz", date: "2023-10-12", explanation: "Mu Cephei is a very large star", hdurl: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod.jpg", media_type: .imageForm, title: "Mu Cephei", url: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg", service_version: "v1")
+        repository.mockedFetchPhotoResult = NasaPhoto(date: "2023-10-12", explanation: "Mu Cephei is a very large star", hdurl: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod.jpg", media_type: .imageForm, title: "Mu Cephei", url: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg", service_version: "v1")
         
         sut = PhotoViewModel(repository: repository)
         Task {
             _ = await sut.fetchPhoto()
             let result = sut.getContentUrl()
             
-            XCTAssertEqual(result, "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg")
+          XCTAssertEqual(result?.1, "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg")
         }
         
     }
@@ -54,7 +54,7 @@ import SwiftUI
     
     func testPhotoViewModelGivenValidPhotoModelUrlGetImageReturnsNotNil() {
         
-        repository.mockedFetchPhotoResult = NasaPhoto(copyright: "David Cruz", date: "2023-10-12", explanation: "Mu Cephei is a very large star", hdurl: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod.jpg", media_type: .imageForm, title: "Mu Cephei", url: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg", service_version: "v1")
+        repository.mockedFetchPhotoResult = NasaPhoto(date: "2023-10-12", explanation: "Mu Cephei is a very large star", hdurl: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod.jpg", media_type: .imageForm, title: "Mu Cephei", url: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg", service_version: "v1")
         
         let sut = PhotoViewModel(repository: repository)
         Task {
@@ -96,7 +96,7 @@ class MockPhotoRepository: PhotoRepository {
             return photo
         }
         // Return a default photo or handle as needed for your tests
-        return NasaPhoto(copyright: "David Cruz", date: "2023-10-12", explanation: "Mu Cephei is a very large star", hdurl: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod.jpg", media_type: .imageForm, title: "Mu Cephei", url: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg", service_version: "v1")
+        return NasaPhoto(date: "2023-10-12", explanation: "Mu Cephei is a very large star", hdurl: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod.jpg", media_type: .imageForm, title: "Mu Cephei", url: "https://apod.nasa.gov/apod/image/2310/MuCephei_apod1024.jpg", service_version: "v1")
     }
     
     
