@@ -9,8 +9,8 @@ import Foundation
 
 
 protocol PhotoRepository {
-    func fetchPhoto() async throws -> NasaPhoto? 
+    func fetchPhoto() async throws -> NasaPhoto?
     // use core foundation types
-    func getImage(imageUrl: String) throws -> Any?
-    func storeImage(key: String, image: Any)
+  func getImage(imageUrl: String) async throws -> Any?
+  func storeImage(key: String, image: Any) async
 }

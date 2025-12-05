@@ -22,10 +22,8 @@ class MainAppAssetProvider: AppAssetProvider {
         }
         
         // do we have an asset?
-        guard let asset else {
-            // log, and return nothing
-            return nil
-        }
+        guard let asset else {  // log, and return nothing
+          return nil  }
 
         return asset
     }

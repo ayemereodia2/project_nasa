@@ -7,7 +7,7 @@
 
 import Foundation
 
-actor BasicNetwork: NetworkProvider {
+class BasicNetwork: NetworkProvider {
     
     init(
         logProvider: LogProvider

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PhotoDataSource {
+protocol PhotoDataSource: Actor {
     func save(name: String, photo: Any)
     func get(name: String) -> Any?
     func flush()

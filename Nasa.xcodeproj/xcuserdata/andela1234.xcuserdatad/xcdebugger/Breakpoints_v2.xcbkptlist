@@ -18,22 +18,36 @@
             endingLineNumber = "49"
             landmarkName = "retrieve(destination:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F4653568-8261-47B8-A13B-61BF53F18466"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Foundation/Network/BasicNetwork.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "retrieve(destination:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "46D26E35-B470-4CA5-912C-2CFFCDEAC0CD - 5582b0fd7282cc2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Nasa.BasicNetwork.retrieve&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(destination: Foundation.URL) async throws -&gt; Swift.Optional&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Nasa.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andela1234/Documents/Nasa/Foundation/Network/BasicNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49">
+               </Location>
+               <Location
+                  uuid = "46D26E35-B470-4CA5-912C-2CFFCDEAC0CD - 30e20e090e536c2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Nasa.BasicNetwork.retrieve&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(destination: Foundation.URL) async throws -&gt; Swift.Optional&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "Nasa.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andela1234/Documents/Nasa/Foundation/Network/BasicNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -71,22 +85,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5C8F6844-C62A-49CE-A369-E05C93E346A2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Foundation/Network/BasicNetwork.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "retrieve(destination:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A0EDC009-AF36-4BD9-8EA2-653D55BD6F32"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -110,8 +108,24 @@
             filePath = "Modules/Photos/View/PhotoViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetchPhoto()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "272F8638-7EF0-4BCC-AB72-CD902EE3B99B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Modules/Photos/View/PhotoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "fetchPhoto()"
             landmarkType = "7">
          </BreakpointContent>

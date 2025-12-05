@@ -20,12 +20,12 @@ class MainPhotoRepository: PhotoRepository {
     
     func fetchPhoto() async throws -> NasaPhoto? {
         // check object cache
-        guard let validResult = dataSource.get(name: "key") as? NasaPhoto else {
+      guard let validResult = await dataSource.get(name: "key") as? NasaPhoto else {
             
             do {
                 if let photoResult = try await service.fetch() {
                     
-                    dataSource.save(name: "key", photo: photoResult)
+                  await dataSource.save(name: "key", photo: photoResult)
                     
                     return photoResult
                 }
@@ -38,9 +38,9 @@ class MainPhotoRepository: PhotoRepository {
         return validResult
     }
     
-    func getImage(imageUrl: String) throws -> Any? {
+  func getImage(imageUrl: String) async throws -> Any? {
         // check cache
-        guard let validImage = dataSource.get(name: imageUrl) else {
+        guard let validImage = await dataSource.get(name: imageUrl) else {
             // note: generally won't happen; more typical is an exception
             throw PhotoError.generalError(message: "no photo exist")
         }
@@ -48,8 +48,8 @@ class MainPhotoRepository: PhotoRepository {
         return validImage
     }
     
-    func storeImage(key: String, image: Any) {
-         dataSource.save(name: key, photo: image)
+  func storeImage(key: String, image: Any) async {
+         await dataSource.save(name: key, photo: image)
     }
     
     private let dataSource: PhotoDataSource

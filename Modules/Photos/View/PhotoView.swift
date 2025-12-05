@@ -11,23 +11,22 @@ struct PhotoView: View {
   @ObservedObject var viewModel: PhotoViewModel
   
   var body: some View {
-    // handle only image
-    if let content = viewModel.getContentUrl(),
-       content.0 == .imageForm, let url = content.1 {
       VStack(alignment: .center) {
         // check cache
-        if let image = viewModel.getImage(url: url) {
+        if let image = viewModel.imageResult {
            image
             .resizable()
           
         } else {
-          AsyncImage(url: URL(string: url)) { phase in
+          AsyncImage(url: URL(string: viewModel.result?.1 ?? "")) { phase in
             switch phase {
             case .success(let image):
               image
                 .resizable()
                 .onAppear {
-                  viewModel.storeImage(url: url, image: image)
+                  Task {
+                    await viewModel.cacheImage(url: viewModel.result?.1 ?? "", image: image)
+                  }
                 }
             default:
               ProgressView()
@@ -35,14 +34,14 @@ struct PhotoView: View {
           }
         }
       }
+      .task {
+       await viewModel.fetchPhoto()
+      }
       .onTapGesture {
         withAnimation(.spring()) {
           viewModel.fullScreen()
         }
       }
-    } else {
-      // check for video and create video player
-    }
   }
 }
 

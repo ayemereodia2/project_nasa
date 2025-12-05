@@ -17,6 +17,9 @@ final class PhotoViewModel: PhotoViewModelProtocol {
   @Published var showErrorMessage = false
   @Published  var isFullScreen = false
   @Published  var shouldShowTitle = false
+  @Published var imageResult:Image? = nil
+  @Published var result:(MediaType, String?)? = nil
+
   
   // MARK: - Dependencies
   
@@ -49,6 +52,7 @@ final class PhotoViewModel: PhotoViewModelProtocol {
       let fetchedPhoto = try await repository.fetchPhoto()
       photo = fetchedPhoto
       shouldShowTitle = true
+      await getPhotoFromUrl()
     } catch let error as PhotoError {
       handleError(with: errorHandler.handleError(error: error))
       showErrorMessage = true
@@ -65,29 +69,30 @@ final class PhotoViewModel: PhotoViewModelProtocol {
   
   // MARK: - Additional Helpers
   
-  func getContentUrl() -> (MediaType?, String?)? {
+  func getPhotoFromUrl() async {
     guard let mediaType = photo?.media_type else {
-      return (nil, nil)   // Should not normally happen
+      return   
     }
     
     switch mediaType {
     case .imageForm:
-      return (.imageForm, photo?.hdurl)
+      result = (MediaType.imageForm, photo?.hdurl)
+      imageResult = await getImage(url: result?.1 ?? "")
     case .videoForm:
-      return (.videoForm, photo?.hdurl)
+       result = (MediaType.videoForm, photo?.hdurl)
     }
   }
   
-  func getImage(url: String) -> Image? {
-    // Assuming repository returns something convertible to SwiftUI.Image
-    guard let image = try? repository.getImage(imageUrl: url) as? Image else {
+  func getImage(url: String) async -> Image? {
+   
+    guard let image = try? await repository.getImage(imageUrl: url) as? Image else {
       return nil
     }
     return image
   }
   
-  func storeImage(url: String, image: Image) {
-    repository.storeImage(key: url, image: image)
+  func cacheImage(url: String, image: Image) async {
+    await repository.storeImage(key: url, image: image)
   }
   
   func handleError(with message: String) {

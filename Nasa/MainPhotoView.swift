@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MainPhotoView<ViewModel: PhotoViewModelProtocol>: View {
+struct MainPhotoView: View {
   // MARK: - properties
-  @StateObject var viewModel: PhotoViewModel
+  @StateObject var viewModel: PhotoViewModel = PhotoViewModel()
   private let titleAnimationDuration: TimeInterval = 0.35
   
   var body: some View {
@@ -19,14 +19,21 @@ struct MainPhotoView<ViewModel: PhotoViewModelProtocol>: View {
       VStack(spacing: 16) {
           if viewModel.isFullScreen {
             PhotoView(viewModel: viewModel)
-              .frame(maxWidth: .infinity, maxHeight: .infinity)
-              .transition(.scale.combined(with: .opacity))
+              .transition(
+                .expand(
+                  from: CGSize(width: .infinity, height: halfHeight),
+                  to: CGSize(width: .infinity, height: proxy.size.height)
+                )
+              )
             
           } else {
             PhotoView(viewModel: viewModel)
-            .frame(height: halfHeight)
-            .frame(maxWidth: .infinity)
-            .transition(.move(edge: .bottom).combined(with: .opacity))
+              .transition(
+                .expand(
+                  from: CGSize(width: .infinity, height: proxy.size.height),
+                  to: CGSize(width: .infinity, height: halfHeight)
+                )
+              )
           }
         
         if viewModel.shouldShowTitle {

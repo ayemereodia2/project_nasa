@@ -8,9 +8,9 @@
 import Foundation
 
 
-class MainPhotoDataSource: PhotoDataSource {
+actor MainPhotoDataSource: PhotoDataSource {
     // use in memory cache to save photo
-    var inMemoryCache = [String : Any]()
+    private var inMemoryCache = [String : Any]()
     
     func save(name: String, photo: Any) {
         inMemoryCache[name] = photo
